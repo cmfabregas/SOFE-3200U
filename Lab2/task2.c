@@ -1,10 +1,14 @@
 /*task2.c
 **By: Carlos Fabregas
 **Oct 11, 2016
+**Objective: Replace target phrases from Input.txt with a corresponding output and writing to the file "Dante.txt"
 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+//calls function replace
+void replace(char *lineStored,char *target, char *output);
 
 int main()
 {
@@ -97,7 +101,7 @@ void replace(char *lineStored,char *target, char *output)
             copiedLine[x] = lineStored[x];
         }
 
-        copiedLine[x] = '\0';
+        copiedLine[x] = '\0'; //ending with null
         strcat(copiedLine, output); //adds the output after first part of copied line is added to it
                 
         //adds the rest of the words
@@ -106,8 +110,8 @@ void replace(char *lineStored,char *target, char *output)
             rightHolder[y] =  lineStored[i];
             y++;
         }  
+        rightHolder[y]= '\0'; //end with null
 
-        rightHolder[y]= '\0';
         strcat(copiedLine,rightHolder);
         strcpy(lineStored,copiedLine);
 }
