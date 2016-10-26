@@ -17,7 +17,7 @@ int main()
     FILE *toWrite = fopen("Dante.txt","w");
     char lineStored[1000];
           
-    int n; //size of string being replaced
+    
 
     if((fP =fopen("Input.txt", "r"))== NULL)
     {
