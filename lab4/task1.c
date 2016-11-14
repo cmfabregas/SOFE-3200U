@@ -2,6 +2,8 @@
 **task1.c
 **By: Carlos Fabregas
 **Nov 13, 2016
+**Objective: the function of this program is to calculate how long it takes
+**for random characters to be written in Spam.txt
 */
 
 
@@ -21,7 +23,7 @@ int main()
     generate(toWrite);
     end = clock(); // timer ends 
 
-    printf("Elapsed: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
+    printf("Elapsed: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);//outputs elapsed time
     
     return 0;
 }
